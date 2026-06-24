@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Reviews</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Submit & See Movie Reviews</h1>
+    </header>
+
+    <main>
+      <!-- Section for the review submission form -->
+      <section class="form-container">
+        <h2>Add a New Review</h2>
+        <form id="review-form">
+          <div class="form-group">
+            <label for="movie-title-input">Movie Title</label>
+            <input
+              type="text"
+              id="movie-title-input"
+              placeholder="e.g., The Matrix"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="movie-rating-input">Your Rating (out of 5)</label>
+            <select id="movie-rating-input">
+              <option value="5">★★★★★ (Excellent)</option>
+              <option value="4">★★★★☆ (Great)</option>
+              <option value="3">★★★☆☆ (Good)</option>
+              <option value="2">★★☆☆☆ (Fair)</option>
+              <option value="1">★☆☆☆☆ (Poor)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="movie-review-input">Your Review</label>
+            <textarea
+              id="movie-review-input"
+              rows="6"
+              placeholder="What did you think of the movie?"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Submit Review</button>
+        </form>
+      </section>
+
+      <!-- Section where review cards will be dynamically added -->
+      <section id="reviews-list-container">
+        <h2>Submitted Reviews</h2>
+        <div id="reviews-list">
+          <!-- Dynamically generated review cards will go here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+

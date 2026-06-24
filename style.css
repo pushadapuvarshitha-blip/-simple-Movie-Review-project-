@@ -1,0 +1,126 @@
+/* Basic styles for the entire page */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between the form and the reviews list */
+}
+
+/* Styling for the form container */
+.form-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Styling for input, select, and textarea elements */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Important for padding and width to work together */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Styling for the submit button */
+#review-form button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#review-form button:hover {
+  background-color: #218838;
+}
+
+/* Container for the list of reviews */
+#reviews-list-container h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Flexbox layout for the reviews list */
+#reviews-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  gap: 20px; /* Space between cards */
+}
+
+/* Styling for each dynamically created review card */
+.review-card {
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  /* Flex-basis controls the base width of the cards */
+  flex-basis: calc(50% - 40px); /* 2 cards per row, accounting for gap */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card h3 {
+  margin: 0 0 10px 0;
+  color: #0056b3;
+}
+
+.review-card .rating {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+.review-card .review-text {
+  flex-grow: 1; /* Allows this to take up available space */
+}
+
+/* Media Query for smaller screens to stack cards */
+@media (max-width: 768px) {
+  .review-card {
+    flex-basis: 100%; /* 1 card per row on smaller screens */
+  }
+}
